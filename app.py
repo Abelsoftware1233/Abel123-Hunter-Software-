@@ -197,7 +197,8 @@ def search():
     return jsonify({'emails': emails})
 
 # -------------------------------
-# 7. START
+# 7. START (poort 5030, host 0.0.0.0)
 # -------------------------------
 if __name__ == '__main__':
-    app.run(debug=True, port=5030)
+    # Luister op alle interfaces (0.0.0.0) zodat je later het IP kunt aanpassen
+    app.run(host='0.0.0.0', debug=True, port=5030)
